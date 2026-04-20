@@ -1,0 +1,44 @@
+# ghostty +show-config --default --docs
+# ghostty +list-themes
+
+# window
+window-padding-x = 12
+window-padding-y = 12
+window-height = 36
+window-width = 72
+window-position-x = 1050
+window-position-y = 20
+
+split-divider-color = #bb9af7
+window-save-state = always
+
+font-family = JetBrainsMonoNL Nerd Font Mono 
+font-thicken = true
+font-size = 15
+font-feature = -calt, -liga, -dlig
+window-inherit-font-size       = true
+
+# Look and Feel
+adjust-cursor-thickness        = 3
+adjust-underline-position      = 3
+bold-is-bright                 = true
+cursor-invert-fg-bg            = true
+cursor-opacity                 = 0.8
+link-url                       = true
+mouse-hide-while-typing        = true
+window-vsync                   = true
+
+# Other
+clipboard-paste-protection     = true
+clipboard-trim-trailing-spaces = true
+copy-on-select                 = true
+macos-auto-secure-input        = true
+macos-secure-input-indication  = true
+quit-after-last-window-closed  = true
+scrollback-limit               = 4200
+shell-integration              = zsh
+shell-integration-features     = cursor
+shell-integration-features     = sudo
+shell-integration-features     = title
+
+theme = Xcode Dark hc

@@ -1,0 +1,199 @@
+# single column on small panes
+
+$[ $lf_width -le 80 ] && lf -remote "send $id :set nopreview; set ratios 1" || exit 0
+
+set icons
+
+set relativenumber
+
+set number
+
+set dircounts
+
+set ratios 2:3:4
+
+set shell sh
+
+set shellopts "-eu"
+
+set ifs "\n"
+
+set period 1
+
+set tabstop 4
+
+set scrolloff 8
+
+set wrapscroll
+
+set hidden!
+
+set hiddenfiles ".DS_Store"
+
+set smartcase
+
+set incsearch
+
+set incfilter
+
+set truncatechar "…"
+
+set info time:size
+
+set cursorpreviewfmt "\033[7];2m"
+
+set promptfmt "\033[38;2;255;255;255m %w"
+
+set waitmsg "\033[1;31m⏎\033[m"
+
+set timefmt "02/01/2006 15:04:05 "
+
+set infotimefmtnew "02/01 15:04"
+
+set infotimefmtold "02/01/06"
+
+set errorfmt "\033[1;31m"
+
+set numberfmt "\033[38;2;75;87;116m"
+
+set previewer ~/.config/lf/previewer
+
+set cleaner ~/.config/lf/cleaner
+
+setlocal ~/Downloads sortby "atime"
+
+setlocal ~/Downloads reverse
+
+cmd trash %{{
+	mkdir -p ~/.Trash
+	echo "Move to trash: $fx"
+	printf "Confirm? (y/n): "
+	read confirm
+
+	if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+		# Generate unique name to avoid overwrites
+		for file in $fx; do
+			base=$(basename "$file")
+			target="$HOME/.trash/$base"
+
+			# If file already exists in trash, add timestamp
+			if [ -e "$target" ]; then
+				timestamp=$(date +%Y%m%d_%H%M%S)
+				target="$HOME/.trash/${base}_$timestamp"
+			fi
+
+			mv "$file" "$target"
+			echo "Moved: $file -> $target"
+		done
+		echo "Done"
+	else
+		echo "Cancelled"
+	fi
+}}
+
+cmd chmod ${{
+	[ $# -ne 1 ] && exit
+	eval "chmod u$1 '$f'"
+	lf -remote "send $id reload"
+}}
+
+cmd mkdir %{{
+	IFS=" "
+	mkdir -p -- "$*"
+	lf -remote "send $id select \"$*\""
+}}
+
+cmd touch %{{
+	IFS=" "
+	if [ -z "$*" ]; then echo "name required"; exit; fi
+	if [ -f "$*" ]; then echo "file exists"; exit; fi
+	if [ -d "$*" ]; then echo "there is a directory with the same name"; exit; fi
+	touch "$*"
+	lf -remote "send $id select \"$*\""
+}}
+
+cmd create %{{
+	IFS=" "
+	if [ -z "$*" ]; then echo "name required"; exit; fi
+	if [[ "$*" == */ ]] ; then
+		mkdir -p -- "$*"
+		lf -remote "send $id select \"$*\""
+		exit 0
+	fi
+	base=$(dirname -- "$*")
+	[ "$base" != . ] && mkdir -p -- "$base"
+	touch "$*"
+	lf -remote "send $id select \"$*\""
+}}
+
+cmd fzf_jump ${{
+	pwd=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+	res="$(fd . $pwd -H -I -d 6 -E .git -E node_modules | fzf +m | sed 's/\\/\\\\/g;s/"/\\"/g')"
+	if [ -d "$res" ] ; then
+		cmd="cd"
+	elif [ -f "$res" ] ; then
+		cmd="select"
+	else
+		exit 0
+	fi
+	lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd fzf_search_all ${{
+	res="$(\
+		RG_PREFIX="rg --column --line-number --no-heading --color=always \
+			--smart-case "
+		FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+			fzf --ansi --bind "change:reload:$RG_PREFIX {q} || true" \
+			| cut -d':' -f1
+	)"
+	[ ! -z "$res" ] && lf -remote "send $id select \"$res\""
+}}
+
+cmd fzf_grep ${{
+	res="$( \
+		rg --column --line-number --no-heading --color=always --smart-case -e "$*"| \
+		fzf --ansi | cut -d':' -f1
+	)"
+	[ ! -z "$res" ] && lf -remote "send $id select \"$res\""
+}}
+
+map a push :create<space>
+
+map +x chmod +x
+
+map R :reload; recol; cfg_reload
+
+map sr set reverse!
+
+map sd set dirfirst!
+
+map o $open $f; lf -remote "send ${id} quit"
+
+map O $open -R $fx
+
+map Q $lf -remote "send quit"
+
+map i $$lf_previewer "$f"
+
+map I %file "$f"
+
+map y
+
+map yy copy
+
+map yp $printf "%s" "$fx" | pbcopy
+
+map yn $printf "%s" "${fx##*/}" | pbcopy
+
+map yd $printf "%s" "${fx%/*}" | pbcopy
+
+map d trash
+
+map x cut
+
+map DD delete
+
+map p paste
+
+map <enter> open

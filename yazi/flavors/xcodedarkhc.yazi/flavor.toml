@@ -1,0 +1,66 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+[mgr]
+cwd = { fg = "#ffffff" }
+hovered = { reversed = true }
+preview_hovered = { underline = true }
+
+[tabs]
+active = { fg = "#1f1f1f", bg = "#ffffff", bold = true }
+inactive = { fg = "#ffffff", bg = "#1f1f1f" }
+
+[mode]
+normal_main = { fg = "#1f1f1f", bg = "#ffffff", bold = true }
+normal_alt  = { fg = "#ffffff", bg = "#1f1f1f" }
+select_main = { fg = "#1f1f1f", bg = "#4fd6be", bold = true }
+select_alt  = { fg = "#ffffff", bg = "#1f1f1f" }
+unset_main  = { fg = "#1f1f1f", bg = "#b294bb", bold = true }
+unset_alt   = { fg = "#ffffff", bg = "#1f1f1f" }
+
+[status]
+overall = { fg = "#ffffff" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#1f1f1f", bold = true }
+progress_normal = { fg = "#ffffff", bg = "#1f1f1f" }
+progress_error  = { fg = "#ff5c57", bg = "#1f1f1f" }
+
+[input]
+border   = { fg = "#ffffff" }
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "#ffffff" }
+
+[tasks]
+border  = { fg = "#ffffff" }
+hovered = { fg = "#b294bb", underline = true }
+
+[which]
+mask      = { bg = "#3e3e3e" }
+cand      = { fg = "#4fd6be" }
+rest      = { fg = "#a9b1d6" }
+desc      = { fg = "#b294bb" }
+separator = "  "
+separator_style = { fg = "#626262" }
+
+[help]
+on      = { fg = "#4fd6be" }
+run     = { fg = "#b294bb" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#1f1f1f", bg = "#a9b1d6" }
+
+[notify]
+title_info  = { fg = "#4fd6be" }
+title_warn  = { fg = "#f0a000" }
+title_error = { fg = "#ff5c57" }
+
+[filetype]
+rules = [
+  { name = "*", fg = "#ffffff" },
+  { mime = "image/*", fg = "#9ece6a" },
+  { mime = "video/*", fg = "#ff6ac1" },
+  { mime = "audio/*", fg = "#ff6ac1" },
+  { mime = "application/zip", fg = "#b294bb" },
+  { mime = "application/pdf", fg = "#9ece6a" }
+]

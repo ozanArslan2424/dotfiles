@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Yazi Dark Theme</string>
+    <key>settings</key>
+    <array>
+
+        <!-- Global settings -->
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>dark</string>
+                <key>foreground</key>
+                <string>#ffffff</string>
+                <key>caret</key>
+                <string>#ffffff</string>
+                <key>invisibles</key>
+                <string>#3e3e3e</string>
+                <key>lineHighlight</key>
+                <string>#1f1f1f</string>
+                <key>selection</key>
+                <string>#4fd6be</string>
+            </dict>
+        </dict>
+
+        <!-- Comments -->
+        <dict>
+            <key>name</key>
+            <string>Comment</string>
+            <key>scope</key>
+            <string>comment, punctuation.definition.comment</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#7fbf7f</string>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+
+        <!-- Strings -->
+        <dict>
+            <key>name</key>
+            <string>String</string>
+            <key>scope</key>
+            <string>string</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ff5c57</string>
+            </dict>
+        </dict>
+
+        <!-- Numbers -->
+        <dict>
+            <key>name</key>
+            <string>Number</string>
+            <key>scope</key>
+            <string>constant.numeric</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffff87</string>
+            </dict>
+        </dict>
+
+        <!-- Keywords / Statements -->
+        <dict>
+            <key>name</key>
+            <string>Keyword</string>
+            <key>scope</key>
+            <string>keyword, storage.type</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ff6ac1</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+
+        <!-- Functions -->
+        <dict>
+            <key>name</key>
+            <string>Function</string>
+            <key>scope</key>
+            <string>entity.name.function</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5fd7ff</string>
+            </dict>
+        </dict>
+
+        <!-- Types -->
+        <dict>
+            <key>name</key>
+            <string>Type</string>
+            <key>scope</key>
+            <string>entity.name.type, support.type</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5fd7ff</string>
+            </dict>
+        </dict>
+
+        <!-- Variables / Identifiers -->
+        <dict>
+            <key>name</key>
+            <string>Variable</string>
+            <key>scope</key>
+            <string>variable, entity.name.variable</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5fd7ff</string>
+            </dict>
+        </dict>
+
+        <!-- Constants -->
+        <dict>
+            <key>name</key>
+            <string>Constant</string>
+            <key>scope</key>
+            <string>constant.language, constant.other</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffff87</string>
+            </dict>
+        </dict>
+
+        <!-- Operators / Punctuation -->
+        <dict>
+            <key>name</key>
+            <string>Operator</string>
+            <key>scope</key>
+            <string>keyword.operator, punctuation.separator</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#7fbfff</string>
+            </dict>
+        </dict>
+
+        <!-- Errors -->
+        <dict>
+            <key>name</key>
+            <string>Error</string>
+            <key>scope</key>
+            <string>invalid, invalid.illegal</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ff5c57</string>
+                <key>fontStyle</key>
+                <string>underline</string>
+            </dict>
+        </dict>
+
+    </array>
+</dict>
+</plist>

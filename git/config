@@ -1,0 +1,12 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = ozanArslan2424
+	email = 136094471+ozanArslan2424@users.noreply.github.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main

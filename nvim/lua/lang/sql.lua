@@ -1,0 +1,2 @@
+-- GODDAMN AWFUL
+-- Do.enable_lsp("sqlls", {})

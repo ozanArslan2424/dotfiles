@@ -1,0 +1,108 @@
+# Mole Cleanup Preview - 2025-12-26 02:07:46
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== User essentials ===
+/Users/ozan/Library/Caches  # 16.78GB (84 items)
+/Users/ozan/Library/Logs  # 55.3MB (37 items)
+
+=== Finder metadata ===
+
+=== macOS system caches ===
+/Users/ozan/Library/Saved Application State  # 144KB (9 items)
+
+=== Sandboxed app caches ===
+
+=== Browsers ===
+/Users/ozan/Library/Caches/Google/Chrome  # 15.7MB (4 items)
+/Users/ozan/Library/Application Support/Google/Chrome/Profile 2/GPUCache  # 3.8MB (5 items)
+/Users/ozan/Library/Application Support/Google/Chrome/Profile 1/GPUCache  # 1.6MB (5 items)
+/Users/ozan/Library/Application Support/Google/Chrome/Default/GPUCache  # 1.6MB (5 items)
+/Users/ozan/Library/Caches/BraveSoftware/Brave-Browser  # 2.62GB (3 items)
+/Users/ozan/Library/Caches/com.operasoftware.Opera/Default  # 24.4MB
+/Users/ozan/Library/Caches/zen/Profiles  # 433.8MB
+
+=== Cloud storage ===
+
+=== Office applications ===
+
+=== Developer tools ===
+/Users/ozan/.bun/install/cache  # 14.30GB (9549 items)
+/Users/ozan/.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f  # 47.6MB
+/Users/ozan/.cargo/git  # 1.7MB (2 items)
+/Users/ozan/.oh-my-zsh/cache  # 12KB (3 items)
+/Users/ozan/Library/Caches/CocoaPods/Pods  # 115.2MB
+/Users/ozan/Library/Developer/Xcode/UserData/IB Support/Simulator Devices  # 35.0MB
+/Users/ozan/.gradle/daemon/9.1.0  # 8KB
+/Users/ozan/.bundle/cache/compact_index  # 22.1MB
+/Users/ozan/Library/Caches/deno  # 5.0MB (13 items)
+/Users/ozan/Library/Caches/com.tinyapp.TablePlus  # 1.7MB (3 items)
+/Users/ozan/Library/Caches/SentryCrash  # 108KB (9 items)
+/Users/ozan/Library/Caches/Homebrew  # 2.88GB (8 items)
+
+=== Development applications ===
+/Users/ozan/Library/Application Support/Code/logs  # 2.4MB (10 items)
+/Users/ozan/Library/Application Support/Code/Cache/Cache_Data  # 256.6MB
+/Users/ozan/Library/Application Support/Code/CachedData  # 55.1MB (5 items)
+/Users/ozan/Library/Caches/us.zoom.xos  # 6.0MB (3 items)
+/Users/ozan/Library/Caches/com.adobe.ExchangePluginCustomHook  # 80KB (2 items)
+/Users/ozan/Library/Caches/com.apple.TV  # 5.9MB (7 items)
+/Users/ozan  # 168KB (2 items)
+/Users/ozan/.lesshst  # 4KB
+
+=== Virtual machine tools ===
+
+=== Application Support ===
+
+=== Uninstalled app data ===
+/Users/ozan/Library/Caches/org.swift.swiftpm  # 1.0MB
+/Users/ozan/Library/Caches/io.macfuse.preferencepanes.macfuse  # 140KB
+/Users/ozan/Library/Caches/io.sentry  # 48KB
+/Users/ozan/Library/WebKit/com.avira.security  # 900KB
+/Users/ozan/Library/WebKit/com.grammarly.GRLlamaOnboarding  # 460KB
+/Users/ozan/Library/WebKit/com.insynchq.insync  # 640KB
+/Users/ozan/Library/WebKit/com.lencx.chatgpt  # 1.3MB
+/Users/ozan/Library/WebKit/com.linguee.DeepLCopyTranslator  # 708KB
+/Users/ozan/Library/WebKit/com.rightfontapp.RightFont5  # 576KB
+/Users/ozan/Library/WebKit/com.rogueamoeba.soundsource  # 576KB
+/Users/ozan/Library/WebKit/com.teamviewer.TeamViewer  # 648KB
+/Users/ozan/Library/HTTPStorages/com.aspyr.civ5xp.steam  # 76KB
+/Users/ozan/Library/HTTPStorages/com.avira.security  # 56KB
+/Users/ozan/Library/HTTPStorages/com.avira.security.UIAgent  # 60KB
+/Users/ozan/Library/HTTPStorages/com.avira.security.UninstallerHelper  # 56KB
+/Users/ozan/Library/HTTPStorages/com.avira.security.binarycookies  # 4KB
+/Users/ozan/Library/HTTPStorages/com.avira.security.installer  # 56KB
+/Users/ozan/Library/HTTPStorages/com.avira.security.updater  # 60KB
+/Users/ozan/Library/HTTPStorages/com.avira.stats.xpcservice  # 84KB
+/Users/ozan/Library/HTTPStorages/com.bluestacks.BlueStacks  # 64KB
+/Users/ozan/Library/HTTPStorages/com.digiarty.VideoProc  # 56KB
+/Users/ozan/Library/HTTPStorages/com.drbuho.BuhoCleaner  # 168KB
+/Users/ozan/Library/HTTPStorages/com.drbuho.BuhoCleaner.StatusBarMenu  # 72KB
+/Users/ozan/Library/HTTPStorages/com.fortinet.forticlient.macos.vpn  # 68KB
+/Users/ozan/Library/HTTPStorages/com.google.GoogleUpdater  # 2.8MB
+/Users/ozan/Library/HTTPStorages/com.gorillized.outlinemac  # 56KB
+/Users/ozan/Library/HTTPStorages/com.grammarly.GRLlamaOnboarding.binarycookies  # 4KB
+/Users/ozan/Library/HTTPStorages/com.insynchq.insync.binarycookies  # 4KB
+/Users/ozan/Library/HTTPStorages/net.publicspace.dist.vitaminr4  # 76KB
+/Users/ozan/Library/HTTPStorages/net.publicspace.dist.vitaminr4.binarycookies  # 4KB
+/Users/ozan/Library/HTTPStorages/io.macfuse.preferencepanes.macfuse  # 72KB
+
+=== Apple Silicon updates ===
+
+=== iOS device backups ===
+
+=== Time Machine incomplete backups ===
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 37.94GB
+# Items: 9828
+# Categories: 61

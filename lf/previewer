@@ -1,0 +1,17 @@
+#!/bin/sh
+
+file=$1
+w=$2
+h=$3
+x=$4
+y=$5
+
+case "$(file -Lb --mime-type -- "$1")" in
+image/*)
+	kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$file" </dev/null >/dev/tty
+	exit 1
+	;;
+*)
+	bat --color=always --style=plain --pager=never "$1"
+	;;
+esac

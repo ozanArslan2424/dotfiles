@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kitty icat --clear --transfer-mode memory </dev/null >/dev/tty
