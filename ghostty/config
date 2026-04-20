@@ -41,4 +41,5 @@ shell-integration-features     = cursor
 shell-integration-features     = sudo
 shell-integration-features     = title
 
-theme = Xcode Dark hc
+# theme = Xcode Dark hc
+theme = TokyoNight Night

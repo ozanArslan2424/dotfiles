@@ -17,6 +17,10 @@
       "rev": "677cc07c16e8b89999108d2ebeefcfc5f539b73c",
       "src": "https://github.com/nvim-flutter/flutter-tools.nvim"
     },
+    "ghostty-theme-sync.nvim": {
+      "rev": "94b4fcd3c09d695d252a7ec14d1550d08f5a1fe5",
+      "src": "https://github.com/landerson02/ghostty-theme-sync.nvim"
+    },
     "gruber-darker.nvim": {
       "rev": "aba065c3a79b58cc3863d5c9db319255abd1258a",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"

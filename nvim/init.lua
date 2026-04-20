@@ -49,6 +49,8 @@ start({
 	end,
 
 	plugins = {
+		-- broken plugin, maybe contribute
+		-- "landerson02/ghostty-theme-sync.nvim",
 		"ember-theme/nvim",
 		"folke/tokyonight.nvim",
 		"webhooked/kanso.nvim",
