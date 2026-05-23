@@ -1,23 +1,34 @@
-alias ls="tree -L 1"
-alias cd="z"
+alias ls="eza --icons -w 1"
+alias ll="eza -lh --icons --git"
+alias lsa="eza -lah --icons --git"
+# Reuse ls completions for eza (avoids defining a separate completion function)
+compdef eza=ls
+
 alias cl="clear"
+
 alias md="mkdir"
+
 alias v="nvim"
 alias nv="nvim"
-alias src="source ~/.zshrc"
-alias notes="nvim ~/Obsidian/Main/notes"
+
+alias src="source $ZDOTDIR/.zshrc"
+
 alias ai="ollama run llama3.2"
-alias dev="bun dev"
-alias dev:local="bun dev:local"
-alias gcm="git checkout main"
-alias gfp="git fetch && git pull"
-alias mongostart="brew services start mongodb-community@8.0"
-alias mongostop="brew services stop mongodb-community@8.0"
-alias cmsdocs="bat /Users/ozan/dev/cms-documentation/etiketler.md"
+
 alias cool="fastfetch"
+
 alias cowsay="cowsay -r"
 
 alias sshk="kitty +kitten ssh"
 
-alias lf='lfcd'
-alias ranger='rangercd'
+alias lf="lfcd"
+alias ranger="rangercd"
+
+alias myip="ipconfig getifaddr en0"
+
+alias grep="rg --color=auto"
+alias diff="diff --color=auto"
+alias df="df -h"
+
+alias dev="bun run dev"
+alias pn="pnpm"

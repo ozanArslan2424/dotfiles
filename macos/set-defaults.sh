@@ -24,3 +24,5 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # defaults write com.apple.Safari.plist WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 # defaults write com.apple.Safari.plist "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 # defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+chmod -N ~/Public/Drop\ Box ~/Public
