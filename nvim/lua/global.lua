@@ -45,12 +45,7 @@ local function hl(name, opts)
 end
 
 local function map(keys, fn, desc, mode)
-	vim.keymap.set(
-		mode or "n",
-		keys,
-		fn,
-		{ silent = true, noremap = true, desc = desc }
-	)
+	vim.keymap.set(mode or "n", keys, fn, { silent = true, noremap = true, desc = desc })
 end
 
 local function search_for_in_cwd(configs)

@@ -3,8 +3,7 @@ local conform_util = require("conform.util")
 
 local function has_config(filenames)
 	return function(_, ctx)
-		return vim.fs.find(filenames, { upward = true, path = ctx.dirname })[1]
-			~= nil
+		return vim.fs.find(filenames, { upward = true, path = ctx.dirname })[1] ~= nil
 	end
 end
 

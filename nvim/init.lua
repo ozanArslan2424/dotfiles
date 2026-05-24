@@ -5,8 +5,8 @@ ColorScheme = "tokyonight-night"
 -- "mini" or "native"
 StatuslineOption = "mini"
 
--- "lf" or "mini" or "yazi"
-ExplorerOption = "yazi"
+-- "mini" or "yazi"
+ExplorerOption = "mini"
 
 -- "mini" or "blink"
 CmpOption = "mini"

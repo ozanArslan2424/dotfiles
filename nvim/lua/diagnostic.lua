@@ -21,12 +21,7 @@ end
 
 -- Intercept publishDiagnostics before they hit vim.diagnostic
 local orig = vim.lsp.handlers["textDocument/publishDiagnostics"]
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function(
-	err,
-	result,
-	ctx,
-	config
-)
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
 	if result and result.uri and path_ignored(vim.uri_to_fname(result.uri)) then
 		result.diagnostics = {}
 	end

@@ -18,11 +18,7 @@ bufremove.setup()
 local del_other_bufs = function()
 	local current_buf = vim.api.nvim_get_current_buf()
 	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-		if
-			buf ~= current_buf
-			and vim.api.nvim_buf_is_valid(buf)
-			and vim.bo[buf].buflisted
-		then
+		if buf ~= current_buf and vim.api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted then
 			bufremove.delete(buf)
 		end
 	end

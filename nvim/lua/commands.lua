@@ -2,23 +2,13 @@ Do.auto_cmd("TextYankPost", "Highlight when yanking text", function()
 	vim.hl.on_yank()
 end)
 
-Do.user_cmd(
-	"PackAdd",
-	"Add plugins (:PackAdd user/repo1 user/repo2)",
-	function(opts)
-		vim.pack.add(opts.fargs)
-	end,
-	{ nargs = "+" }
-)
+Do.user_cmd("PackAdd", "Add plugins (:PackAdd user/repo1 user/repo2)", function(opts)
+	vim.pack.add(opts.fargs)
+end, { nargs = "+" })
 
-Do.user_cmd(
-	"PackDel",
-	"Delete plugins (:PackDel plugin1 plugin2)",
-	function(opts)
-		vim.pack.del(opts.fargs)
-	end,
-	{ nargs = "+" }
-)
+Do.user_cmd("PackDel", "Delete plugins (:PackDel plugin1 plugin2)", function(opts)
+	vim.pack.del(opts.fargs)
+end, { nargs = "+" })
 
 Do.user_cmd("PackUpdate", "Update all plugins or specific ones", function(opts)
 	-- checks if any argument is passed
@@ -52,11 +42,7 @@ Do.user_cmd("BufferInfo", "Show Treesitter and LSP information", function()
 
 	table.insert(
 		lines,
-		"🚀 LSP: "
-			.. (
-				#attached_names > 0 and table.concat(attached_names, ", ")
-				or "None"
-			)
+		"🚀 LSP: " .. (#attached_names > 0 and table.concat(attached_names, ", ") or "None")
 	)
 	vim.notify(table.concat(lines, "\n"), vim.log.levels.INFO, {
 		title = "Buffer Status",
